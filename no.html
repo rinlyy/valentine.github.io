@@ -6,7 +6,7 @@
     <title>Valentine's Message</title>
     <style>
         body {
-           font-family: 'Comic Sans MS';
+            font-family: 'Comic Sans MS';
             background: linear-gradient(to bottom right, #FFB2C0, #FFD4D8);
             text-align: center;
             margin: 0;
@@ -20,11 +20,13 @@
 
         h1 {
             color: #e6005c;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Added text shadow */
         }
 
         p {
             color: #333;
             font-size: 18px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Added text shadow */
         }
 
         .go-back-button {
@@ -39,6 +41,7 @@
             color: #fff;
             position: relative;
             animation: moveButton 2s ease-in-out infinite;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Added text shadow */
         }
 
         .go-back-button:hover {
@@ -85,12 +88,12 @@
 
             if (clickCount < 7) {
                 const alertMessages = [
-                      "Work for it ˶ᵔ ᵕ ᵔ˶",
+                    "Work for it ˶ᵔ ᵕ ᵔ˶",
                     "You're doing great, Keep going",
                     "Don't give up now baby, you're almost there",
                     "Almost halfway yeah?",
                     "Keep it going",
-                    "Such a good girl, good job baby" ,
+                    "Such a good girl, good job baby",
                 ];
 
                 const buttonTexts = [
@@ -99,11 +102,11 @@
                     "dont tell me youre giving up",
                     "one more",
                     "kidding",
-                    "having fun?" ,
+                    "having fun?",
                 ];
 
                 alert(alertMessages[clickCount - 1]);
-                
+
                 // Update the button text
                 button.innerText = buttonTexts[clickCount - 1];
                 // Move the button to a new position, or add more complex animations here
@@ -116,4 +119,3 @@
 
 </body>
 </html>
-
