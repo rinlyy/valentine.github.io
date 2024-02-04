@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Message</title>
+    <style>
+        body {
+           font-family: 'Comic Sans MS';
+            background: linear-gradient(to bottom right, #FFB2C0, #FFD4D8);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #e6005c;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .go-back-button {
+            margin-top: 20px;
+            display: inline-block;
+            cursor: pointer;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            background-color: #333;
+            color: #fff;
+            position: relative;
+            animation: moveButton 2s ease-in-out infinite;
+        }
+
+        .go-back-button:hover {
+            background-color: #555;
+            animation: none; /* Stop animation on hover */
+        }
+
+        @keyframes moveButton {
+            0%, 20%, 40%, 60%, 80%, 100% {
+                transform: translateX(0) translateY(0);
+            }
+            10% {
+                transform: translateX(200px) translateY(0);
+            }
+            30% {
+                transform: translateX(-200px) translateY(0);
+            }
+            50% {
+                transform: translateX(0) translateY(200px);
+            }
+            70% {
+                transform: translateX(0) translateY(-200px);
+            }
+            90% {
+                transform: translateX(400px) translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ok so you don't love me anymore (っ◞‸◟ c)</h1>
+    <p>k i see how it is \(๑ -`. ‘- ๑)/</p>
+
+    <a href="#" class="go-back-button" id="goBackButton" onclick="moveButton()">one more chance ⇀‸↼</a>
+
+    <script>
+        let clickCount = 0;
+
+        function moveButton() {
+            clickCount++;
+
+            const button = document.getElementById('goBackButton');
+
+            if (clickCount < 7) {
+                const alertMessages = [
+                      "Work for it ˶ᵔ ᵕ ᵔ˶",
+                    "You're doing great, Keep going",
+                    "Don't give up now baby, you're almost there",
+                    "Almost halfway yeah?",
+                    "Keep it going",
+                    "Such a good girl, good job baby" ,
+                ];
+
+                const buttonTexts = [
+                    "mmmm",
+                    "cmon",
+                    "dont tell me youre giving up",
+                    "one more",
+                    "kidding",
+                    "having fun?" ,
+                ];
+
+                alert(alertMessages[clickCount - 1]);
+                
+                // Update the button text
+                button.innerText = buttonTexts[clickCount - 1];
+                // Move the button to a new position, or add more complex animations here
+            } else {
+                alert("that's my girl");
+                window.location.href = "hihi.html";
+            }
+        }
+    </script>
+
+</body>
+</html>
+

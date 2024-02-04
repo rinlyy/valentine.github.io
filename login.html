@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Page</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS';
+            background: linear-gradient(to bottom right, #FFB2C0, #FFD4D8);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #e6005c;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            font-size: 24px;
+            color: #e6005c;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 15px;
+            font-size: 18px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid #e6005c;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #e6005c;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #b40046;
+        }
+    </style>
+</head>
+<body>
+
+
+    <form id="accessForm" onsubmit="checkWord(event)">
+        <label for="antsy">Enter Nickname:</label>
+        <input type="password" id="antsy" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function checkWord(event) {
+            event.preventDefault();
+
+            const secretWord = document.getElementById('antsy').value;
+
+            // Check if the entered word is correct
+            if (secretWord.toLowerCase() === 'antsy') {
+                window.location.href = 'hihi.html';
+            } else {
+                alert('Try again, baby!');
+            }
+        }
+    </script>
+
+</body>
+</html>
+
